@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dra Regiane | Fisioterapeuta Dermato Funcional e Injetáveis</title>
+<meta name="description" content="Fisioterapeuta dermato funcional, estética avançada e injetáveis, cosmetóloga. Mais saúde, energia e qualidade de vida. Goiás.">
+<meta name="theme-color" content="#f1e7d6">
+<link rel="icon" href="icone.png">
+<link rel="apple-touch-icon" href="icone.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dra Regiane | Fisioterapeuta">
+<meta property="og:description" content="Mais saúde, energia e qualidade de vida! Seu bem-estar em boas mãos!">
+<meta property="og:image" content="https://raw.githubusercontent.com/pauloddev/regianesilvafisio/main/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pauloddev/regianesilvafisio/main/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f3ead9; --cream-2:#ebdfc8; --panel:rgba(255,252,246,.72);
+  --gold:#b79848; --gold-d:#97782f; --gold-l:#dcc58a;
+  --gold-grad:linear-gradient(135deg,#7a5f1d 0%,#a8872f 40%,#c9a95a 52%,#a3822c 68%,#76591a 100%);
+  --btn-grad:linear-gradient(135deg,#cfb064 0%,#ead59b 50%,#cdae60 100%);
+  --ink:#4a3b30; --ink-2:#6d5d50;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:var(--cream)}
+body{min-height:100vh;font-family:'Jost',sans-serif;color:var(--ink);display:flex;justify-content:center;overflow-x:hidden}
+/* fundo creme com losangos dourados sutis (como no flyer) */
+.bg{position:fixed;inset:0;z-index:-1;
+  background:
+   radial-gradient(80% 45% at 50% 0%,rgba(255,251,242,.95),rgba(255,251,242,0) 70%),
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M60 6 114 60 60 114 6 60Z' fill='none' stroke='%23b79848' stroke-opacity='.16' stroke-width='1'/%3E%3Cpath d='M60 30 90 60 60 90 30 60Z' fill='none' stroke='%23b79848' stroke-opacity='.10' stroke-width='1'/%3E%3C/svg%3E"),
+   linear-gradient(180deg,var(--cream),var(--cream-2))}
+.wrap{width:100%;max-width:460px;padding:max(24px,env(safe-area-inset-top)) 22px max(30px,env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;text-align:center}
+
+/* Foto principal */
+.hero{position:relative;width:100%;opacity:0;animation:rise .9s .05s forwards}
+.hero img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:28px;box-shadow:0 26px 50px rgba(74,59,48,.25)}
+.hero::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.7);border-radius:20px;pointer-events:none}
+.crf{position:absolute;left:50%;bottom:-17px;transform:translateX(-50%);white-space:nowrap;display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;
+  background:#fffaf0;border:1px solid rgba(183,152,72,.7);box-shadow:0 10px 22px rgba(74,59,48,.18);font-size:12px;font-weight:500;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold-d);z-index:2}
+.dia{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex:none}
+
+h1{margin-top:44px;font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(38px,11.5vw,50px);line-height:1.05;
+  background:var(--gold-grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:rise .9s .2s forwards,shine 12s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.role{margin-top:12px;font-size:13px;font-weight:500;letter-spacing:5.5px;text-transform:uppercase;color:var(--ink);opacity:0;animation:rise .9s .3s forwards}
+
+.sep{display:flex;align-items:center;gap:12px;width:100%;margin:22px 0;opacity:0;animation:rise .9s .38s forwards}
+.sep::before,.sep::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+
+/* Formação */
+.creds{width:100%;border-radius:20px;background:var(--panel);border:1px solid rgba(183,152,72,.4);box-shadow:0 12px 28px rgba(74,59,48,.09);padding:6px 20px;opacity:0;animation:rise .9s .45s forwards}
+.creds li{list-style:none;display:flex;align-items:center;justify-content:center;gap:12px;padding:15px 0;font-size:15px;font-weight:500;letter-spacing:.3px;border-bottom:1px dashed rgba(183,152,72,.4)}
+.creds li:last-child{border-bottom:0}
+
+/* Frase */
+.phrase{margin-top:16px;width:100%;position:relative;padding:26px 24px;border-radius:18px;background:var(--cream-2);border:1px solid rgba(183,152,72,.55);
+  outline:1px solid rgba(183,152,72,.3);outline-offset:-7px;opacity:0;animation:rise .9s .52s forwards}
+.phrase p{text-wrap:balance;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(19px,5.4vw,22px);line-height:1.4;color:var(--ink)}
+.phrase b{font-weight:500;color:var(--gold-d)}
+
+/* Botão */
+.cta{margin-top:18px;width:100%;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;color:#3a2e24;
+  font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;position:relative;overflow:hidden;isolation:isolate;
+  background:var(--btn-grad);background-size:200% auto;box-shadow:0 14px 30px rgba(143,114,41,.36),inset 0 -2px 0 rgba(0,0,0,.08);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;opacity:0;animation:rise .8s .6s forwards}
+.cta svg{width:22px;height:22px;fill:#3a2e24;flex:none}
+.cta::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 5s 1.8s infinite}
+@keyframes sweep{to{left:140%}}
+
+.label{margin:36px 0 6px;display:flex;align-items:center;gap:12px;width:100%;font-size:12px;font-weight:500;letter-spacing:4.5px;text-transform:uppercase;color:var(--gold-d)}
+.label::before,.label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(183,152,72,.7))}
+.label::after{transform:scaleX(-1)}
+.sub{margin-bottom:18px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-2)}
+
+/* Aplicações: 3 colunas x 7 linhas, tudo alinhado */
+.grid{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;min-height:78px;padding:10px 6px;border-radius:14px;
+  background:var(--panel);border:1px solid rgba(183,152,72,.38);box-shadow:0 6px 16px rgba(74,59,48,.06);font-size:12.5px;font-weight:500;line-height:1.25;letter-spacing:.2px}
+.chip .dia{width:7px;height:7px}
+.chip.hl{background:#fffaf0;border-color:var(--gold);box-shadow:0 8px 20px rgba(183,152,72,.25);color:var(--gold-d);font-weight:600}
+
+/* Links */
+.links{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.link{display:flex;align-items:center;justify-content:center;gap:10px;height:58px;border-radius:14px;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid rgba(183,152,72,.5);
+  font-weight:500;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;box-shadow:0 8px 20px rgba(74,59,48,.08);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s}
+.link svg{width:20px;height:20px;fill:var(--gold-d);flex:none;transition:fill .3s}
+.place{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;letter-spacing:1px;color:var(--ink-2)}
+.place svg{width:18px;height:18px;fill:var(--gold-d)}
+
+@media (hover:hover){
+  .cta:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(143,114,41,.5)}
+  .link:hover{transform:translateY(-3px);background:var(--ink);color:var(--gold-l)}.link:hover svg{fill:var(--gold-l)}
+}
+.cta:active,.link:active{transform:scale(.98)}
+.cta:focus-visible,.link:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.foot{margin-top:28px;font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--ink-2)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<main class="wrap">
+
+  <div class="hero">
+    <img src="regiane.jpg" alt="Dra Regiane, fisioterapeuta" width="1000" height="1333">
+    <span class="crf"><i class="dia"></i>CRF 355666<i class="dia"></i></span>
+  </div>
+
+  <h1>Dra Regiane</h1>
+  <p class="role">Fisioterapeuta</p>
+  <div class="sep"><i class="dia"></i></div>
+
+  <ul class="creds">
+    <li><i class="dia"></i>Fisioterapeuta dermato funcional</li>
+    <li><i class="dia"></i>Estética avançada e injetáveis</li>
+    <li><i class="dia"></i>Cosmetóloga</li>
+  </ul>
+
+  <section class="phrase">
+    <p>Mais saúde, energia e qualidade de vida!<br><b>Seu bem-estar em boas mãos!</b></p>
+  </section>
+
+  <a class="cta" target="_blank" rel="noopener" href="https://wa.me/5564993267098?text=Ol%C3%A1%2C%20Dra%20Regiane!%20Gostaria%20de%20agendar%20um%20atendimento.">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm0 18.200c-1.500 0-3-.4-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.500-1.300-3.500-2.900-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-1 2.400.1 1 .5 2 1.200 2.900 1.300 1.900 2.900 3.200 5 4 1.800.6 2.500.6 3.400.5.600-.1 1.700-.7 2-1.400.2-.7.200-1.200.1-1.400-.1-.1-.2-.2-.4-.3z"/></svg>
+    Agendar no WhatsApp
+  </a>
+
+  <p class="label">Aplicações de injetáveis</p>
+  <p class="sub">Vitaminas · Aminoácidos · Minerais</p>
+  <div class="grid">
+    <div class="chip"><i class="dia"></i>Vit B6</div>
+    <div class="chip"><i class="dia"></i>Picolinato de cromo</div>
+    <div class="chip"><i class="dia"></i>Pool de tri metilador</div>
+    <div class="chip"><i class="dia"></i>Melatonina</div>
+    <div class="chip"><i class="dia"></i>Colágeno</div>
+    <div class="chip"><i class="dia"></i>Ferro</div>
+    <div class="chip"><i class="dia"></i>Taurina</div>
+    <div class="chip"><i class="dia"></i>B12 Metilcobalamina</div>
+    <div class="chip"><i class="dia"></i>Vitamina A</div>
+    <div class="chip"><i class="dia"></i>Coenzima Q10</div>
+    <div class="chip"><i class="dia"></i>Pool de aminoácidos</div>
+    <div class="chip"><i class="dia"></i>Vitamina E</div>
+    <div class="chip"><i class="dia"></i>Vitamina D3</div>
+    <div class="chip"><i class="dia"></i>Curcuma</div>
+    <div class="chip"><i class="dia"></i>Vitamina K</div>
+    <div class="chip"><i class="dia"></i>Vitamina C</div>
+    <div class="chip"><i class="dia"></i>K2</div>
+    <div class="chip"><i class="dia"></i>Pill Food</div>
+    <div class="chip"><i class="dia"></i>Complexo B</div>
+    <div class="chip hl"><i class="dia"></i>Protocolo pós bariátrica</div>
+    <div class="chip hl"><i class="dia"></i>Detox hepático</div>
+  </div>
+
+  <p class="label">Contato</p>
+  <div class="links">
+    <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/fisio_regianesilva">
+      <svg viewBox="0 0 24 24"><path d="M7.500 2h9A5.500 5.500 0 0122 7.500v9a5.500 5.500 0 01-5.500 5.500h-9A5.500 5.500 0 012 16.500v-9A5.500 5.500 0 017.500 2zm0 2A3.500 3.500 0 004 7.500v9A3.500 3.500 0 007.500 20h9a3.500 3.500 0 003.500-3.500v-9A3.500 3.500 0 0016.500 4zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm5.300-3.100a1.200 1.200 0 110 2.400 1.200 1.200 0 010-2.400z"/></svg>Instagram
+    </a>
+    <a class="link" target="_blank" rel="noopener" href="https://wa.me/5564993267098?text=Ol%C3%A1%2C%20Dra%20Regiane!%20Vim%20pelo%20seu%20link.">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm0 18.200c-1.500 0-3-.4-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.500-1.300-3.500-2.900-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-1 2.400.1 1 .5 2 1.200 2.900 1.300 1.900 2.900 3.200 5 4 1.800.6 2.500.6 3.400.5.600-.1 1.700-.7 2-1.400.2-.7.200-1.200.1-1.400-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp
+    </a>
+  </div>
+  <p class="place"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.200 7 13 7 13s7-7.800 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 1112 6.500a2.500 2.500 0 010 5z"/></svg>Goiás</p>
+
+  <p class="foot">© Dra Regiane · Fisioterapeuta</p>
+</main>
+</body>
+</html>
